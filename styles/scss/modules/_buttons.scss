@@ -1,8 +1,9 @@
 .btn {
-  @include pxRem(padding, 8 16);
-  @include pxRem(border-radius, 8);
-  @include pxRem(font-size, 18);
+  @include pxRem(padding, 10 20);
+  @include pxRem(border-radius, 20px);
+  @include pxRem(font-size, 13);
   @include pxRem(height, 40);
+  letter-spacing: 1px;
   background: map-get($colors, primary);
   color: map-get($colors, white);
   line-height: 1;
@@ -25,4 +26,20 @@
     border-color: map-get($colors, txt-disabled);
     background: map-get($colors, bg-gray-light);
   }
+}
+
+.btn-primary {
+  background-color: map-get($colors, black);
+  color: map-get($colors, white)
+}
+
+.btn-primary:hover {
+  background-color: map-get($colors, yellow);
+  color: map-get($colors, black);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

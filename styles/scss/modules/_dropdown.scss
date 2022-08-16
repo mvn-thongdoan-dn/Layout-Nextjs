@@ -1,0 +1,7 @@
+.dropdown {
+  @include pxRem("padding", 10);
+  border: 1px solid #e5e5e5;
+  border-top: 3px solid map-get($colors, black);
+  background-color: map-get($colors, white);
+  z-index: map-get($zindexs, dropdown);
+}

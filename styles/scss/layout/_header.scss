@@ -1,5 +1,219 @@
 .page-header {
-  @include pxRem(padding, 10);
-  background: map-get($colors, bg-gray);
-  text-align: center;
+  .header-top {
+    font: 400 13px "Poppins";
+    background-color: map-get($colors, txt-black);
+    color: map-get($colors, white);
+
+    &-wrapper {
+      @include pxRem('line-height', 46);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .first-content, .second-content {
+      @include pxRem('padding-left', 25);
+      position: relative;
+    }
+
+    .first-content::before, .second-content::before {
+      @include pxRem('font-size', 16);
+      font-family: "Material Icons";
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all .3s ease;
+    }
+
+    .first-content:hover::before, .second-content:hover::before {
+      transform: rotateY(180deg);
+    }
+
+    .first-content::before {
+      content: "\e54e";
+    }
+
+    .second-content::before {
+      content:'\e0be';
+    }
+
+    a {
+      color: map-get($colors, white);
+    }
+
+    @include respond-below(medium) {
+      &-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .first-content {
+        @include pxRem('padding', 10 0 0 25);
+      }
+
+      .second-content {
+        @include pxRem('padding', 10 0 10 25);
+      }
+
+      .first-content::before, .second-content::before {
+        top: 30%;
+      }
+    }
+  }
+
+  .header-main {
+    border-bottom: 1px solid map-get($colors, border-gray);
+
+    &-menu {
+      @include pxRem("height", 123);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+
+    &-menu .header-logo {
+      @include pxRem('margin', 36 0);
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .header-options-left {
+      width: 300px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font: 400 13px "Poppins";
+      color: map-get($colors, primary);
+
+      .languages-wrapper, .currency-wrapper {
+        position: relative;
+      }
+
+      .languages-wrapper button, .currency-wrapper button {
+        display: flex;
+        align-items: center;
+        border: none;
+        background-color: map-get($colors, white);
+        color: map-get($colors, primary);
+        cursor: pointer;
+        letter-spacing: 1px;
+      }
+
+      .languages-wrapper button::after, 
+      .currency-wrapper button::after {
+        @include pxRem("margin-left", 4);
+        content: "";
+        border-top: 0.3em solid;
+        border-right: 0.3em solid transparent;
+        border-bottom: 0;
+        border-left: 0.3em solid transparent;
+      }
+
+      .contact:hover, 
+      .languages-wrapper button:hover, 
+      .currency-wrapper button:hover {
+        color: map-get($colors, black);
+      }
+
+      .contact {
+        cursor: pointer;
+      }
+
+      .contact i {
+        @include pxRem('font-size', 15);
+        @include pxRem('padding', 4);
+        @include pxRem('margin-right', 7);
+        @include pxRem('width', 25);
+        @include pxRem('height', 25);
+        @include pxRem('border-radius', 25);
+
+
+        color: map-get($colors, secondary);
+        border: 1px solid map-get($colors, border-gray-light);
+        vertical-align: middle;
+        transition: all .3s ease;
+      }
+
+      .contact:hover i {
+        transform: rotateY(180deg);
+        border-color: map-get($colors, secondary);
+      }
+
+      .languages-menu ul {
+        @include pxRem("width", 120);
+      }
+      
+      .currency-menu ul {
+        @include pxRem("width", 150);
+      }
+      
+      .languages-menu ul li,
+      .currency-menu ul li  {
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all .3s ease-in-out;
+      }
+
+      .languages-menu ul li:not(:first-child),
+      .currency-menu ul li:not(:first-child) {
+        @include pxRem("padding-top", 5);
+      }
+
+      .languages-menu ul li:hover,
+      .currency-menu ul li:hover {
+        color: map-get($colors, black);
+      }
+    }
+
+    .header-options-right {
+      display: flex;
+      align-items: center;
+
+      .search-wrapper,
+      .user-wrapper,
+      .shopping-cart-wrapper {
+        position: relative;
+      }
+
+
+      .search-wrapper > button,
+      .user-wrapper > button,
+      .shopping-cart-wrapper > button,
+      .shopping-cart-wrapper > button i {
+        @include pxRem("width", 50);
+        @include pxRem('font-size', 22);
+        border: none;
+        color: map-get($colors, secondary);
+        background-color: map-get($colors, white);
+        cursor: pointer;
+        transition: all .3s ease;
+      }
+
+      .search-wrapper > button:hover, 
+      .user-wrapper > button:hover, 
+      .shopping-cart-wrapper > button i:hover {
+        color: map-get($colors, black);
+        transform: rotateY(180deg);
+      }
+
+      .user ul {
+        font: 400 13px "Poppins";
+      }
+
+      .user ul {
+        @include pxRem('width', 200);
+      }
+
+      .user ul li a {
+        color: map-get($colors, secondary);
+      }
+
+      .user ul li a:hover {
+        color: map-get($colors, black);
+      }
+    }
+  }
 }

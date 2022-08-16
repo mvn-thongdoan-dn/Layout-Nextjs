@@ -58,3 +58,26 @@ label {
 .form-group {
   @include pxRem(margin-bottom, 20);
 }
+
+// search form
+.search-form {
+  @include pxRem('width', 320);
+  @include pxRem('padding', 0);
+  font: 400 13px "Poppins";
+  display: flex;
+
+  input {
+    border: none;
+    &:focus {
+      outline: none;
+      box-shadow: none;
+    }
+  }
+
+  button {
+    @include pxRem("width", 50);
+    @include pxRem('font-size', 20);
+    border: none;
+    background-color: map-get($colors, white);
+  }
+}

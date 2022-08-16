@@ -14,14 +14,40 @@ $grid-columns: 12;
   }
 }
 // End mixins for build grid
-$grid-gutter: 10px;
-$container-width: 1200px;
-.container {
+$grid-gutter: 16px;
+// $container-width: 1200px;
+// .container {
+//   padding-left: $grid-gutter;
+//   padding-right: $grid-gutter;
+//   margin: 0 auto;
+//   max-width: $container-width;
+// }
+
+.container { 
   padding-left: $grid-gutter;
   padding-right: $grid-gutter;
   margin: 0 auto;
-  max-width: $container-width;
-}
+  
+	@media (min-width: 1200px){
+		max-width: 1170px !important;
+	}
+	@media (min-width: 1260px){
+		max-width: 1230px!important;
+	}
+	@media (min-width: 1690px){
+		max-width: 1660px!important;
+	}
+	@media (min-width: 768px){
+		max-width: 750px;
+	}
+	@media (min-width: 576px){
+		max-width: 970px; 
+	}
+	@media (max-width: 543px){
+		padding:0 $grid-gutter;
+	}
+} 
+
 .row {
   display: flex;
   flex-wrap: wrap;

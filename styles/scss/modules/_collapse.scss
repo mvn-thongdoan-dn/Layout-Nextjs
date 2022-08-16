@@ -1,0 +1,20 @@
+.collapse {
+  height: 0px;
+  overflow: hidden;
+  transition: all .3s ease-in-out;
+
+  position: absolute;
+  top: 40px;
+}
+
+.collapse-left {
+  left: 0;
+}
+
+.collapse-right {
+  right: 0;
+}
+
+.collapse-horizontal {
+  width: 0px;
+}

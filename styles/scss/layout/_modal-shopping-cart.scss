@@ -1,0 +1,71 @@
+.shopping-cart {
+  @include pxRem('width', 330);
+
+  .dropdown {
+    @include pxRem('padding', 15 25 25);
+    font-family: "Poppins";
+
+    .card-product {
+      @include pxRem('padding-bottom', 30);
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card-product span img {
+      padding: 10px 0 !important;
+      cursor: pointer;
+    }
+
+    .card-product .product-content {
+      @include pxRem('padding', 12);
+      @include pxRem('width', 198);
+    }
+
+    .product-content .product-name {
+      color: map-get($colors, secondary);
+    }
+
+    .product-content div {
+      @include pxRem('font-size', 14);
+      @include pxRem('padding-top', 8);
+    }
+
+    .product-content div .product-quantity {
+      @include pxRem('margin-right', 5);
+    }
+
+    .product-content div .product-price {
+      @include pxRem('margin-left', 5);
+    }
+
+    .card-product button {
+
+      border: none;
+      color: map-get($colors, secondary);
+      background-color: map-get($colors, white);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    .total {
+      @include pxRem('padding', 20 0);
+      border-top: 1px solid map-get($colors, border-gray);
+      border-bottom: 1px solid map-get($colors, border-gray);
+      display: flex;
+      justify-content: space-between;
+      color: map-get($colors, black);
+      font-weight: 600;
+    }
+
+    .options {
+      @include pxRem('padding-top', 30);
+    }
+
+    .options button {
+      @include pxRem('width', 135);
+    }
+  }
+}
