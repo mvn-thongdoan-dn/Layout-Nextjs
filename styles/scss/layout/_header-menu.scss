@@ -1,0 +1,147 @@
+.header-nav {
+  .nav-menu {
+    @include pxRem('height', 64);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .nav-item {
+      @include pxRem('padding', 23 20);
+      position: relative;
+      cursor: pointer;
+    }
+
+    .nav-item .nav-link {
+      font: 700 16px/18px "Playfair Display";
+      color: map-get($colors, primary);
+      text-transform: uppercase;
+      transition: all .3s ease;
+    }
+
+    .nav-item > .nav-link:hover {
+      color: map-get($colors, black);
+    }
+
+    .nav-item .nav-link::after {
+      @include pxRem('margin-left', 4);
+      @include pxRem('vertical-align', 4);
+      content: "";
+      display: inline-block;
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0;
+      border-left: 0.3em solid transparent;
+    }
+
+    .nav-item:hover .sub-menu {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+//  sub-menu
+
+    .sub-menu {
+      @include pxRem('min-width', 160);
+      position: absolute;
+      top: 100%;
+      left: 0;
+
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      display: block;
+      border: 1px solid #e5e5e5;
+      border-top: 3px solid map-get($colors, black);
+      background-color: map-get($colors, white);
+      z-index: map-get($zindexs, dropdown);
+      transition: all .3s ease;
+    }
+
+    .sub-menu .sub-menu-item {
+      @include pxRem('padding', 5 15 0);
+    }
+
+    .sub-menu .sub-menu-item:first-child {
+      @include pxRem('padding-top', 15);
+    }
+
+    .sub-menu .sub-menu-item:last-child {
+      @include pxRem('padding-bottom', 15);
+    }
+
+    .sub-menu .sub-menu-item .sub-menu-link {
+      font: 400 13px "Poppins";
+      color: map-get($colors, secondary);
+    }
+
+    .sub-menu .sub-menu-item:hover > .sub-menu-link{
+      color: map-get($colors, black);
+    }
+
+// menga-menu
+
+    .sub-menu.mega-menu {
+      @include pxRem('width', 580);
+      @include pxRem('padding', 15);
+      display: flex;
+      justify-content: space-evenly;
+      left: -77%;
+    }
+
+    .sub-menu.mega-menu li:not(:last-child) {
+      width: 190px;
+    }
+
+    .sub-menu.mega-menu .sub-title {
+      @include pxRem('margin-right', 30);
+      font: 700 14px/26px "Poppins";
+      text-transform: uppercase;
+      border-bottom: 1px solid #5c5c5c5c;
+    }
+
+    .sub-menu.mega-menu .sub-menu-item {
+      padding-left: 0;
+    }
+
+// menu-lv3
+
+    .sub-menu-item.menu-dropdown {
+      display: flex;
+      position: relative;
+    }
+
+    .sub-menu-item.menu-dropdown:hover .sub-menu {
+      opacity: 1;
+      transform: scaleY(1);
+    }
+
+    .sub-menu-item.menu-dropdown::after {
+      @include pxRem('margin-top', 5);
+      margin-left: auto;
+      content: "";
+      border-top: 0.3em solid;
+      border-right: 0.3em solid transparent;
+      border-bottom: 0;
+      border-left: 0.3em solid transparent;
+      width: 0;
+      height: 0;
+    }
+
+    .sub-menu-item.menu-dropdown:hover::after {
+      border-left: 4px solid black;
+      border-right: 4px solid transparent;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+    }
+
+    .sub-menu-item.menu-dropdown .sub-menu {
+      position: absolute;
+      top: 10px;
+      left: 100%;
+
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+    }
+  }
+}

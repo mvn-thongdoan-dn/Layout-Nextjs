@@ -1,0 +1,102 @@
+.navbar-toggle {
+
+  & > i {
+    @include pxRem('line-height', 70);
+    @include pxRem('font-size', 24);
+    color: map-get($colors, primary);
+  }
+
+  .navbar-collapse {
+    height: 0px;
+    overflow: hidden;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 100%;
+    transition: all .2s ease-in-out;
+    
+    .navbar-menu {
+      @include pxRem('padding', 10 0);
+      border: 1px solid map-get($colors, border-gray);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .navbar-menu .navbar-item {
+      width: 100%;
+    }
+
+    .navbar-item .navbar-link {
+      @include pxRem('padding', 4 10);
+      display: block;
+      font: 400 14px "Poppins";
+      color: map-get($colors, secondary);
+      position: relative;
+      text-transform: capitalize;
+      transition: all .3s ease;
+    }
+
+    .navbar-item .navbar-link:hover {
+      color: map-get($colors, black);
+    }
+
+    .navbar-menu .navbar-item.accordion-menu .navbar-link::before {
+      content: "\e145";
+      font: 500 15px "Material Icons";
+      position: absolute;
+      color: map-get($colors, primary);
+      right: 10px;
+      bottom: 0;
+      margin: auto;
+      line-height: 31px;
+    }
+
+    .navbar-item.accordion-menu.show .navbar-link::before {
+      content: "\e15b";
+    }
+
+// show navbar-sub-menu
+
+    .navbar-item.accordion-menu.show .navbar-sub-menu {
+      display: block
+    }
+
+// navbar-sub-menu
+
+    .navbar-sub-menu {
+      @include pxRem('padding-left', 25);
+      @include pxRem('padding-right', 15);
+      display: none;
+    }
+
+    .navbar-sub-menu .sub-menu-item {
+      width: 100%;
+    }
+
+    .navbar-sub-menu .sub-menu-item .sub-menu-link {
+      display: block;
+      font: 400 13px "Poppins";
+      color: map-get($colors, secondary);
+      text-transform: capitalize;
+      transition: all .3s ease;
+      line-height: 26px;
+    }
+
+    .navbar-sub-menu .sub-menu-item .sub-menu-link:hover {
+      color: map-get($colors, black);
+    }
+
+// options-wrapper
+    
+    .options-wrapper {
+      @include pxRem('padding', 10 0);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      border: 1px solid map-get($colors, border-gray);
+      border-top: 0;
+    }
+  }
+}

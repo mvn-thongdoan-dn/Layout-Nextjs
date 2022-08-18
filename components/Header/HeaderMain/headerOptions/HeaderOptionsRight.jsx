@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import ModalShoppingCart from '../../Modal/ShoppingCart';
+import ModalShoppingCart from '../../../Modal/ShoppingCart';
 
 const HeaderOptionsRight = () => {
   const [ isOpenSearch, setIsOpenSearch ] = useState(false);
@@ -11,16 +11,28 @@ const HeaderOptionsRight = () => {
 
   const toggleSearch = (e) => {
     e.preventDefault();
+    if(isOpenUser || isOpenShoppingCart) {
+      setIsOpenUser(false);
+      setIsOpenShoppingCart(false)
+    }
     setIsOpenSearch(!isOpenSearch);
   }
 
   const toggleUser = (e) => {
     e.preventDefault();
+    if(isOpenSearch || isOpenShoppingCart) {
+      setIsOpenSearch(false);
+      setIsOpenShoppingCart(false)
+    }
     setIsOpenUser(!isOpenUser);
   }
 
   const toggleShoppingCart = (e) => {
     e.preventDefault();
+    if(isOpenSearch || isOpenUser) {
+      setIsOpenSearch(false);
+      setIsOpenUser(false)
+    }
     setIsOpenShoppingCart(!isOpenShoppingCart);
   }
 
