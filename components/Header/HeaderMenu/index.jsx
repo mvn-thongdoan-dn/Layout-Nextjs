@@ -198,4 +198,4 @@ const HeaderMenu = () => {
   )
 }
 
-export default HeaderMenu
+export default HeaderMenu;

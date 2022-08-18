@@ -1,10 +1,11 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React from 'react'
 import HeaderOptionsLeft from './headerOptions/HeaderOptionsLeft'
 import HeaderOptionsRight from './headerOptions/HeaderOptionsRight'
 import HeaderLogo from './HeaderLogo'
 import NavbarToggle from './NavbarToggle'
+import HeaderMenu from '../HeaderMenu'
 
-const HeanderMain = ({width}) => {
+const HeanderMain = ({width, hasSticky}) => {
 
   return (
     <>
@@ -32,6 +33,13 @@ const HeanderMain = ({width}) => {
             </ul>
           </div>
         </div>
+        :
+        hasSticky ? 
+        <ul className="header-main">
+          <li className='header-logo'><HeaderLogo/></li>
+          <li><HeaderMenu/></li>
+          <li><HeaderOptionsRight/></li>
+        </ul>
         :
         <div className="header-main">
           <div className="container">

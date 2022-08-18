@@ -57,6 +57,7 @@
 
   .header-main {
     border-bottom: 1px solid map-get($colors, border-gray);
+    background-color: map-get($colors, white);
 
     &-menu {
       @include pxRem("height", 123);
@@ -254,5 +255,40 @@
       }
     }
 
+  }
+}
+
+.page-header.sticky {
+  background-color: map-get($colors, white);
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid map-get($colors, border-gray);
+  box-shadow:  2px 2px 5px map-get($colors, border-gray);
+
+  transform-origin: top;
+  animation: headersticky .8s ease-in-out;
+
+  .header-main {
+    @include pxRem('height', 91);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: none;
+
+    & > li:nth-child(2) {
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+  }
+
+  @keyframes headersticky {
+    0% {
+      transform: translateY(-100%);
+    } 50% {
+      transform: translateY(-100%);
+    } 100% {
+      transform: translateY(0);
+    }
   }
 }

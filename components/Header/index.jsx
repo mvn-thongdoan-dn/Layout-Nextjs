@@ -1,10 +1,11 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { useLayoutEffect, useState, useEffect } from 'react'
 import HeaderTop from './HeaderTop'
 import HeaderMenu from './HeaderMenu'
 import HeanderMain from './HeaderMain'
 
 const Header = () => {
   const [ width, setWidth ] = useState();
+  const [ hasSticky, setHasSticky ] = useState(false);
 
   useLayoutEffect(() => {
     function updateSize() {
@@ -15,6 +16,17 @@ const Header = () => {
     return () => window.removeEventListener('resize', updateSize);
   }, []);
 
+  useEffect(() => {
+    document.addEventListener("scroll",  () => {  
+      if(window.pageYOffset >= 230 && width >= 1200) {
+        setHasSticky(true)
+      } else if(window.pageYOffset < 92 && width >= 1200) {
+        setHasSticky(false)
+      }
+    });  
+  })
+
+
   return (
     <>
       {
@@ -22,6 +34,13 @@ const Header = () => {
         <header className='page-header'>
           <HeaderTop/>
           <HeanderMain width={width}/>
+        </header>
+        :
+        hasSticky ? 
+        <header className={`page-header ${hasSticky && "sticky"}`}>
+          <div className="container">
+            <HeanderMain hasSticky={hasSticky}/>
+          </div>
         </header>
         :
         <header className='page-header'>
