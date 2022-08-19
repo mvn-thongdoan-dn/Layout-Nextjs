@@ -16,6 +16,8 @@ const Header = () => {
     return () => window.removeEventListener('resize', updateSize);
   }, []);
 
+  console.log("width header", width)
+
   useEffect(() => {
     document.addEventListener("scroll",  () => {  
       if(window.pageYOffset >= 230 && width >= 1200) {
