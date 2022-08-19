@@ -1,3 +1,70 @@
 .page-home {
   // Specific style for Home page
+
+  // newsletter 
+  .newsletter-wrapper {
+    @include pxRem('margin-top', 40);
+    background: url("/images/newsletter-bg.jpg") no-repeat fixed 50%;
+
+    .newsletter {
+      @include pxRem('padding', 55);
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .newsletter .text {
+      @include pxRem('padding-left', 30);
+      font: 400 22px "Playfair Display";
+      color: map-get($colors, white);
+      margin: 0;
+      position: relative;
+      line-height: 40px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .newsletter .text::before {
+      font-family: "Material Icons";
+      content: "\e159";
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    .newsletter .subscribe {
+      display: flex;
+    }
+
+    .newsletter .subscribe input {
+      @include pxRem('padding', 6 12);
+      font: 400 14px "Poppins";
+      border-radius: 0px;
+    }
+
+    .newsletter .subscribe button {
+      @include pxRem('padding', 13 20);
+      font: 500 14px "Poppins";
+      border-radius: 0px;
+      text-transform: uppercase;
+    }
+
+    @include respond-below(wide) {
+
+      .newsletter {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .newsletter .text {
+        @include pxRem('margin-bottom', 10);
+        width: 410px;
+        line-height: 45px;
+      }
+
+      .newsletter .subscribe {
+        width: 100%;
+      }
+    }
+  }
 }

@@ -1,0 +1,25 @@
+.section-title {
+  @include pxRem('padding-bottom', 20);
+  @include pxRem('margin-bottom', 30);
+  font: 700 40px "Playfair Display";
+  
+  position: relative;
+  color: map-get($colors, black);
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: 0px;
+}
+
+
+.section-title:after {
+  @include pxRem('width', 50);
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+
+  height: 2px;
+  margin: 0 auto;
+  border-bottom: 2px solid map-get($colors, black);
+}

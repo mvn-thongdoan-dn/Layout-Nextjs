@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout className='page-home'>
       <Head>
         <title>Create Next App</title>
         <meta name="description" content="layout next-js super vip" />
