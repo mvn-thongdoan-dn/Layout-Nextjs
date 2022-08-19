@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react'
 import ModalShoppingCart from '../../../Modal/ShoppingCart';
+import Link from 'next/link';
 
 const HeaderOptionsRight = () => {
   const [ isOpenSearch, setIsOpenSearch ] = useState(false);
@@ -75,9 +76,21 @@ const HeaderOptionsRight = () => {
           }
         >
           <ul className='dropdown'>
-            <li><a href="/">My Account</a></li>
-            <li><a href="/">Register</a></li>
-            <li><a href="/">Login</a></li>
+            <li>
+              <Link href="/">
+                <a>My Account</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a>Register</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/">
+                <a>Login</a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>

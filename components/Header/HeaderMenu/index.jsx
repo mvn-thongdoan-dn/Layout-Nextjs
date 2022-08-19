@@ -90,7 +90,7 @@ const HeaderMenu = () => {
                 </ul>
               </li>
               <li>
-                <Image src='/images/menu-banner.jpg' width='160px' height='230px'/>
+                <Image src='/images/menu-banner.jpg' width='160px' height='230px' alt="image-menu"/>
               </li>
             </ul>
           </li>

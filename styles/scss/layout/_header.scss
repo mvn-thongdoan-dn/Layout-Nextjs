@@ -91,6 +91,10 @@
       font: 400 13px "Poppins";
       color: map-get($colors, primary);
 
+      .languages-wrapper button img {
+        margin-right: 10px !important;
+      }
+
       .languages-wrapper, .currency-wrapper {
         position: relative;
       }
@@ -168,6 +172,10 @@
       .languages-menu ul li:hover,
       .currency-menu ul li:hover {
         color: map-get($colors, black);
+      }
+
+      .languages-menu ul li img {
+        margin-right: 10px !important;
       }
     }
 

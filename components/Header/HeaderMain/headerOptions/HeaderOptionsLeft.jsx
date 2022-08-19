@@ -1,10 +1,11 @@
 import React, {useRef, useState} from 'react'
+import Image from 'next/image';
 
 const HeaderOptionsLeft = () => {
 
-  const styleImage = {
-    marginRight: "10px"
-  };
+  // const styleImage = {
+  //   marginRight: "10px"
+  // };
 
   const [ isOpenLanguage, setIsOpenLanguage ] = useState(false);
   const [ isOpenCurrency, setIsOpenCurrency ] = useState(false);
@@ -31,7 +32,7 @@ const HeaderOptionsLeft = () => {
     <div className='header-options-left'>
       <div className='languages-wrapper'>
         <button onClick={toggleLanguages}>
-          <img style={styleImage} src="/images/en.jpg" width="18px" height="12px" alt='english-image'/>English
+          <Image src="/images/en.jpg" width="18px" height="12px" alt='english-image'/>English
         </button>
         <div 
           className="collapse collapse-left languages-menu"
@@ -45,8 +46,8 @@ const HeaderOptionsLeft = () => {
           }
         >
           <ul className='dropdown'>
-            <li><img style={styleImage} src="/images/en.jpg" width="18px" height="12px" alt='english-image'/>English</li>
-            <li><img style={styleImage} src="/images/fr.jpg" width="18px" height="12px" alt='french-image'/>French</li>
+            <li><Image src="/images/en.jpg" width="18px" height="12px" alt='english-image'/>English</li>
+            <li><Image src="/images/fr.jpg" width="18px" height="12px" alt='french-image'/>French</li>
           </ul>
         </div>
       </div>
