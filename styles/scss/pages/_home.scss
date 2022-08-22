@@ -116,73 +116,90 @@
 
     // sub-banner 
 
-    // .sub-banner {
-    //   @include pxRem('padding', 0 110);
-    //   display: flex;
-    // }
+    .sub-banner {
+      @include pxRem('padding', 0 95);
+    }
 
-    // .sub-banner .banner-item {
-    //   width: 50%;
-    //   display: flex;
-    //   position: relative;
-    // }
+    .sub-banner .banner-item {
+      @include pxRem('padding', 0 15);
+      width: 50%;
+      position: relative;
+    }
 
-    // .sub-banner .banner-item:last-child {
-    //   justify-content: end;
-    // }
+    .sub-banner .banner-item:first-child .banner-image {
+      float: left;
+    }
 
-    // .sub-banner .banner-content {
-    //   @include pxRem('padding', 40);
-    //   width: 70%;
-    //   position: absolute;
-    // }
+    .sub-banner .banner-item:last-child .banner-image {
+      float: right;
+    }
 
-    // .sub-banner .banner-content.left {
-    //   bottom: 20%;
-    //   right: 15px;
-    // }
+    .sub-banner .banner-content {
+      @include pxRem('padding', 40);
+      width: 70%;
+      position: absolute;
+    }
 
-    // .sub-banner .banner-item:hover .banner-content.left {
-    //   right: 30px
-    // }
+    .sub-banner .banner-content.left {
+      bottom: 20%;
+      right: 15px;
+    }
 
-    // .sub-banner .banner-content.right {
-    //   bottom: 20%;
-    //   left: 15px;
-    // }
+    .sub-banner .banner-item:hover .banner-content.left {
+      right: 30px
+    }
 
-    // .sub-banner .banner-item:hover .banner-content.right {
-    //   left: 30px
-    // }
+    .sub-banner .banner-content.right {
+      bottom: 20%;
+      left: 15px;
+    }
 
-    // .sub-banner .banner-content .banner-title {
-    //   margin: 0;
-    //   font: 400 30px "Playfair Display";
-    //   line-height: 40px;
-    // }
+    .sub-banner .banner-item:hover .banner-content.right {
+      left: 30px
+    }
 
-    // .sub-banner .banner-content .banner-sub-title {
-    //   @include pxRem('padding', 20);
-    //   font: 400 18px "Playfair Display";
-    //   line-height: 20px;
-    //   color: map-get($colors, primary);
-    // }
+    .sub-banner .banner-content .banner-title {
+      margin: 0;
+      font: 400 30px "Playfair Display";
+      line-height: 40px;
+    }
 
-    // .sub-banner .banner-content .banner-sub-title::after {
-    //   content: none;
-    // }
+    .sub-banner .banner-content .banner-sub-title {
+      @include pxRem('padding', 20);
+      font: 400 18px "Playfair Display";
+      line-height: 20px;
+      color: map-get($colors, primary);
+    }
 
-    // .sub-banner .banner-content .banner-text {
-    //   display: none;
-    // }
+    .sub-banner .banner-content .banner-sub-title::after {
+      content: none;
+    }
 
-    // .sub-banner .banner-content .btn-banner {
-    //   @include pxRem('margin', 10 0);
-    // }
+    .sub-banner .banner-content .banner-text {
+      display: none;
+    }
+
+    .sub-banner .banner-content .btn-banner {
+      @include pxRem('margin', 10 0);
+    }
 
     @media (max-width: 1199px) {
       .banner-main .banner-content {
         @include pxRem("padding", 40);
+      }
+
+      .sub-banner {
+        @include pxRem('padding', 0 15);
+      }
+
+      .sub-banner .banner-content .banner-title {
+        @include pxRem('font-size', 22);
+        line-height: 26px;
+      }
+
+      .sub-banner .banner-content .banner-sub-title {
+        @include pxRem('padding', 20 0);
+        letter-spacing: 1px;
       }
     }
 
@@ -214,6 +231,29 @@
         @include pxRem('font-size', 14);
         line-height: 16px;
       }
+
+      .sub-banner .banner-content {
+        @include pxRem('padding', 12);
+      }
+
+      .sub-banner .banner-content .banner-title {
+        @include pxRem('font-size', 18);
+        line-height: 22px;
+      }
+
+      .sub-banner .banner-content .banner-sub-title {
+        @include pxRem('font-size', 16);
+        line-height: 18px;
+        letter-spacing: 1px;
+      }
+
+      .sub-banner .banner-content.left,
+      .sub-banner .banner-content.right {
+        bottom: 10%;
+        left: 15px;
+        right: 15px;
+        margin: 0 auto;
+      }
     }
 
     @include respond-below(medium) {
@@ -231,6 +271,10 @@
         left: 0;
         transform: translateX(0);
         margin: -100px auto 0;
+      }
+
+      .sub-banner {
+        @include pxRem('padding', 0);
       }
     }
 
@@ -252,6 +296,33 @@
         width: 90%;
       }
       
+      .sub-banner {
+        flex-direction: column;
+      }
+
+      .sub-banner .banner-item {
+        @include pxRem('padding', 0 10);
+        width: 100%;
+        text-align: center;
+      }
+
+      .sub-banner .banner-item:first-child {
+        @include pxRem('margin-bottom', 30);
+      }
+
+      .sub-banner .banner-item:first-child .banner-image,
+      .sub-banner .banner-item:last-child .banner-image {
+        float: none;
+        z-index: -1;
+      }
+
+      .sub-banner .banner-item .banner-content {
+        display: inline-block;
+        position: static;
+        z-index: 1;
+        width: 90%;
+        margin: -40px 0 0;
+      }
     }
   }
 

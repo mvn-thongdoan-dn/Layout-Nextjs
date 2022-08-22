@@ -9,7 +9,7 @@ const dataSubBanner = [
     width: "400px",
   }, content: {
     title: 'summer shop',
-    subTitle: 'up tp 70% off',
+    subTitle: 'up to 70% off',
     redirect: 'left'
   }},
   {id: 2, img: {
@@ -18,7 +18,7 @@ const dataSubBanner = [
     width: "400px",
   }, content: {
     title: 'winter shop',
-    subTitle: 'up tp 70% off',
+    subTitle: 'up to 70% off',
     redirect: 'right'
   }}
 ]
@@ -26,7 +26,7 @@ const dataSubBanner = [
 const SubBanner = () => {
   return (
     <section className='banner-wrapper'>
-      {/* <div className="container">
+      <div className="container">
         <div className="sub-banner row">
           {
             dataSubBanner.map((item) => {
@@ -40,7 +40,7 @@ const SubBanner = () => {
             })
           }
         </div>
-      </div> */}
+      </div>
     </section>
   )
 }
