@@ -28,6 +28,12 @@
   }
 }
 
+a.btn {
+  text-transform: capitalize;
+  font-family: "Poppins";
+  line-height: 20px;
+}
+
 .btn-primary {
   background-color: map-get($colors, black);
   color: map-get($colors, white)

@@ -275,6 +275,7 @@
 
   transform-origin: top;
   animation: headersticky .8s ease-in-out;
+  z-index: map-get($zindexs, sticky);
 
   .header-main {
     @include pxRem('height', 91);
