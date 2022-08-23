@@ -12,6 +12,7 @@
 
     .footer-item {
       @include pxRem('padding', 48 15);
+      @include pxRem('height', 326);
       width: 20%;
       text-align: start;
     }
@@ -106,6 +107,7 @@
 
       .footer-list .footer-item {
         @include pxRem('padding', 0);
+        @include pxRem('height', auto);
         width: 100%;
       }
 
@@ -152,6 +154,10 @@
 
     &:hover p {
       color: map-get($colors, white);
+    }
+
+    @include respond-below(wide) {
+      @include pxRem('margin-top', 15);
     }
   }
 
