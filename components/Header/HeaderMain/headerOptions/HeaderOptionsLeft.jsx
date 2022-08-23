@@ -1,11 +1,8 @@
 import React, {useRef, useState} from 'react'
 import Image from 'next/image';
+import PhoneIcon from '@mui/icons-material/Phone';
 
 const HeaderOptionsLeft = () => {
-
-  // const styleImage = {
-  //   marginRight: "10px"
-  // };
 
   const [ isOpenLanguage, setIsOpenLanguage ] = useState(false);
   const [ isOpenCurrency, setIsOpenCurrency ] = useState(false);
@@ -71,7 +68,7 @@ const HeaderOptionsLeft = () => {
           </ul>
         </div>
       </div>
-      <div className="contact"><i className="fa fa-phone" aria-hidden="true"></i>1234567890</div>
+      <div className="contact"><PhoneIcon fontSize='small'/>1234567890</div>
     </div>
   )
 }

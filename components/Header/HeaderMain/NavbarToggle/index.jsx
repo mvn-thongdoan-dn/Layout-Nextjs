@@ -47,6 +47,7 @@ const NavbarToggle = () => {
   const [ accordionMenu, setAccordionMenu ] = useState(OptionsMenu);
   const [ isOpenMenu, setIsOpenMenu ] = useState(false);
   const menuRef = useRef();
+  const itemMenuRef = useRef();
 
   const toggleAccordion = (id) => {
     const newAccordion = [...accordionMenu].map((object) => {
@@ -70,6 +71,14 @@ const NavbarToggle = () => {
         key={id} 
         className={`navbar-item ${optionsSubMenu && "accordion-menu"} ${toggle && "show"}`}
         onClick={() => toggleAccordion(id)}
+        // ref={itemMenuRef}
+        // style={ 
+        //   toggle ? {
+        //   height: itemMenuRef.current.scrollHeight + "px"
+        //   } : { 
+        //     height: "0px"
+        //   }
+        // }
       >
         <Link href="/">
           <a className='navbar-link'>{text}</a>

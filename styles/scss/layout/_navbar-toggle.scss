@@ -1,8 +1,7 @@
 .navbar-toggle {
-
   & > i {
-    @include pxRem('line-height', 70);
-    @include pxRem('font-size', 24);
+    @include pxRem("line-height", 70);
+    @include pxRem("font-size", 24);
     color: map-get($colors, primary);
   }
 
@@ -13,10 +12,12 @@
     left: 0%;
     top: 100%;
     width: 100%;
-    transition: all .2s ease-in-out;
-    
+    transition: all 0.2s ease-in-out;
+    z-index: map-get($zindexs, dropdown);
+    background-color: map-get($colors, white);
+
     .navbar-menu {
-      @include pxRem('padding', 10 0);
+      @include pxRem("padding", 10 0);
       border: 1px solid map-get($colors, border-gray);
       display: flex;
       flex-direction: column;
@@ -29,13 +30,13 @@
     }
 
     .navbar-item .navbar-link {
-      @include pxRem('padding', 4 10);
+      @include pxRem("padding", 4 10);
       display: block;
       font: 400 14px "Poppins";
       color: map-get($colors, secondary);
       position: relative;
       text-transform: capitalize;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
     }
 
     .navbar-item .navbar-link:hover {
@@ -57,18 +58,21 @@
       content: "\e15b";
     }
 
-// show navbar-sub-menu
+    // show navbar-sub-menu
 
     .navbar-item.accordion-menu.show .navbar-sub-menu {
-      display: block
+      display: block;
     }
 
-// navbar-sub-menu
+    // navbar-sub-menu
 
     .navbar-sub-menu {
-      @include pxRem('padding-left', 25);
-      @include pxRem('padding-right', 15);
+      @include pxRem("padding-left", 25);
+      @include pxRem("padding-right", 15);
       display: none;
+      // height: 0px;
+      // overflow: hidden;
+      // transform-origin: top;
     }
 
     .navbar-sub-menu .sub-menu-item {
@@ -80,7 +84,7 @@
       font: 400 13px "Poppins";
       color: map-get($colors, secondary);
       text-transform: capitalize;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
       line-height: 26px;
     }
 
@@ -88,10 +92,10 @@
       color: map-get($colors, black);
     }
 
-// options-wrapper
-    
+    // options-wrapper
+
     .options-wrapper {
-      @include pxRem('padding', 10 0);
+      @include pxRem("padding", 10 0);
       width: 100%;
       display: flex;
       justify-content: center;

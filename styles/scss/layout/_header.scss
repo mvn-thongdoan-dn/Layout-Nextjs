@@ -129,10 +129,10 @@
         cursor: pointer;
       }
 
-      .contact i {
-        @include pxRem('font-size', 15);
+      .contact svg {
+        @include pxRem('font-size', 16);
         @include pxRem('padding', 4);
-        @include pxRem('margin-right', 7);
+        @include pxRem('margin-right', 4);
         @include pxRem('width', 25);
         @include pxRem('height', 25);
         @include pxRem('border-radius', 25);
@@ -192,10 +192,14 @@
 
       .search-wrapper > button,
       .user-wrapper > button,
-      .shopping-cart-wrapper > button,
-      .shopping-cart-wrapper > button i {
+      .shopping-cart-wrapper > button {
         @include pxRem("width", 50);
-        @include pxRem('font-size', 22);
+        @include pxRem("height", 50);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
         border: none;
         color: map-get($colors, secondary);
         background-color: map-get($colors, white);
@@ -288,6 +292,11 @@
       position: absolute;
       left: 0;
       width: 100%;
+    }
+
+    .header-logo {
+      cursor: pointer;
+      z-index: 1;
     }
   }
 

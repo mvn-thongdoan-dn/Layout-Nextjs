@@ -23,7 +23,7 @@
     }
 
     .nav-item .nav-link::after {
-      @include pxRem('margin-left', 4);
+      @include pxRem('margin-left', 7);
       @include pxRem('vertical-align', 4);
       content: "";
       display: inline-block;

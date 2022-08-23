@@ -1,6 +1,10 @@
 import React, { useState, useRef } from 'react'
 import ModalShoppingCart from '../../../Modal/ShoppingCart';
 import Link from 'next/link';
+import SearchIcon from '@mui/icons-material/Search';
+import CloseIcon from '@mui/icons-material/Close';
+import PermIdentityIcon from '@mui/icons-material/PermIdentity';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const HeaderOptionsRight = () => {
   const [ isOpenSearch, setIsOpenSearch ] = useState(false);
@@ -43,8 +47,8 @@ const HeaderOptionsRight = () => {
         <button onClick={toggleSearch}>   
           {
             !isOpenSearch ?
-            <i className="fa fa-search" aria-hidden="true"></i> :
-            <i className="fa fa-times" aria-hidden="true"></i>
+            <SearchIcon/> :
+            <CloseIcon/>
           }
         </button>
         <div 
@@ -63,7 +67,7 @@ const HeaderOptionsRight = () => {
         </div>
       </div>
       <div className="user-wrapper">
-        <button onClick={toggleUser}><i className="fa fa-user" aria-hidden="true"></i></button>
+        <button onClick={toggleUser}><PermIdentityIcon/></button>
         <div 
           className='collapse collapse-right user'
           ref={userRef}
@@ -96,7 +100,7 @@ const HeaderOptionsRight = () => {
       </div>
       <div className='shopping-cart-wrapper'>
         <button onClick={toggleShoppingCart}>
-          <i className="fa fa-shopping-cart" aria-hidden="true"></i>
+          <ShoppingCartIcon/>
           <span className='badge badge-warning'>2</span>
         </button>
         <div 
