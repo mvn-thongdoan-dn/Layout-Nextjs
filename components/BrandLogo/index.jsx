@@ -19,8 +19,6 @@ const dataBrandLogo = [
 ]
 
 const BrandLogo = () => {
-
-
   let settings = {
     dots: false,
     infinite: true,

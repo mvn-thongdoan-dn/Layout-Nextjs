@@ -1,6 +1,240 @@
 .page-home {
   // Specific style for Home page
 
+  //sliderMain 
+  .slider {
+    .slider-item {
+      position: relative;
+    }
+
+    .slider-item .item-content {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 50%;
+
+      transition: all .6s;
+      opacity: 0;
+      text-align: center;
+    }
+
+    .slider-item .item-content.top {
+      transform: translateY(0);
+    }
+
+    .slider-item .item-content.middle {
+      transform: translateY(-100%);
+    }
+
+    .slick-active.slick-current .slider-item .item-content.top {
+      transform: translateY(-60%);
+      opacity: 1;
+    }
+
+    .slick-active.slick-current .slider-item .item-content.middle {
+      transform: translateY(-40%);
+      opacity: 1;
+    }
+
+    .slider-item .item-content .content-sub-title {
+      font: 400 50px "Playfair Display";
+      text-transform: capitalize;
+      font-style: italic;
+      color: map-get($colors, yellow);
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    .slider-item .item-content .content-title {
+      color: map-get($colors, white);
+      font: 900 70px "Poppins";
+      text-transform: capitalize;
+      cursor: pointer;
+      white-space: nowrap;
+      margin-bottom: 50px;
+    }
+
+    .slider-item .item-content .btn-content {
+      @include pxRem('padding', 10 30);
+      @include pxRem('border-radius', 25);
+
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: map-get($colors, black);
+      background: map-get($colors, white);
+      transition: all .3s ease;
+    }
+
+    .slider-item .item-content .btn-content:hover {
+      background-color: map-get($colors, yellow);
+    }
+
+    .slick-slider .slick-arrow {
+      position: absolute;
+      z-index: 10;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+
+      width: 60px;
+      height: 60px;
+      color: map-get($colors, white);
+      border: 2px solid map-get($colors, white);
+      border-radius: 50%;
+    }
+
+    .slick-slider:hover .slick-arrow {
+      opacity: 1;
+    }
+
+    .slick-slider:hover .slick-arrow.slick-prev  {
+      left: 20px;
+    }
+
+    .slick-slider:hover .slick-arrow.slick-next  {
+      right: 20px;
+    }
+
+    .slick-slider .slick-arrow:hover {
+      background-color: map-get($colors, black);
+    }
+
+    .slick-slider .slick-arrow.slick-prev {
+      left: 60px;
+    }
+
+    .slick-slider .slick-arrow.slick-next {
+      right: 60px;
+    }
+
+    .slick-slider .slick-arrow.slick-prev::before,
+    .slick-slider .slick-arrow.slick-next::before {
+      font-family: "Material Icons" ;
+      color: map-get($colors, white);
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .slick-slider .slick-arrow.slick-prev::before {
+      margin-left: 5px;
+      content: '\e5e0';
+    }
+
+    .slick-slider .slick-arrow.slick-next::before {
+      content: "\e5e1";
+    }
+
+    .slick-dots {
+      bottom: 10px;
+    }
+
+    .slick-dots li {
+      margin: 0;
+    }
+
+    .slick-dots li button:before {
+      opacity: 1;
+      color: map-get($colors, white);
+      font-size: 12px;
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: map-get($colors, yellow);
+    }
+
+    @media (max-width: 1199px) {
+      .slider-item .item-content .content-title {
+        @include pxRem('font-size', 60);
+      }
+    }
+
+    @include respond-below(wide) {
+      .slider-item .item-content .content-sub-title {
+        @include pxRem('font-size', 40);
+        @include pxRem('margin-bottom', 10);
+        line-height: 50px
+      }
+
+      .slider-item .item-content .content-title {
+        @include pxRem('font-size', 50);
+        @include pxRem('margin-bottom', 25);
+      }
+    }
+
+    @include respond-below(medium) {
+      .slider-item .item-content .content-sub-title {
+        @include pxRem('font-size', 30);
+        line-height: 40px
+      }
+
+      .slider-item .item-content .content-title {
+        @include pxRem('font-size', 40);
+        line-height: 60px;
+      }
+
+      .slick-slider .slick-arrow {
+        opacity: 1;
+      }
+
+      .slick-slider .slick-arrow.slick-prev {
+        left: 20px;
+      }
+
+      .slick-slider .slick-arrow.slick-next {
+        right: 20px;
+      }
+    }
+
+    @media (max-width: 543px) {
+
+      .slick-active.slick-current .slider-item .item-content.top {
+        transform: translateY(0);
+      }
+
+      .slider-item .item-content.top {
+        transform: translateY(-100%);
+      }
+
+      .slick-active.slick-current .slider-item .item-content.middle {
+        transform: translateY(-65%);
+      }
+
+      .slider-item .item-content.middle {
+        transform: translateY(0);
+      }
+
+      .slider-item .item-content .content-sub-title {
+        @include pxRem('font-size', 16);
+        @include pxRem('margin-bottom', 5);
+        line-height: 18px;
+      }
+
+      .slider-item .item-content .content-title {
+        @include pxRem('font-size', 18);
+        @include pxRem('margin-bottom', 15);
+        line-height: 20px;
+      }
+
+      .slider-item .item-content .btn-content {
+        @include pxRem('padding', 5 15);
+        @include pxRem('font-size', 13);
+        letter-spacing: 1px;
+      }
+
+      .slick-slider .slick-arrow {
+        border: none;
+        width: 20px;
+        height: 20px;
+      }
+
+      .slick-slider .slick-arrow:hover {
+        background-color: transparent;
+      }
+    }
+  }
+
   // banner
   .banner-wrapper {
     @include pxRem('margin', 40 0);
@@ -328,7 +562,6 @@
 
   // lastest-new
   .lastest-news {
-
     .lastest-list {
       @include pxRem('margin', 0 -15);
     }
@@ -465,7 +698,7 @@
 
   // brand-logo
   .brand-logo {
-    @include pxRem('margin', 40 0);
+    @include pxRem('margin', 80 0);
 
     .brand-item {
       text-align: center;
@@ -524,19 +757,16 @@
       content: "\e5e1";
     }
 
-    // .slick-slider button:last-child {
-    //   content: '\e5e1';
-    //   font-family: "Material Icons";
-    // }
     @include respond-below(medium) {
-      @include pxRem('margin', 25 0);
+      @include pxRem('margin', 50 0);
     }
 
     @media (max-width: 543px) {
+      @include pxRem('margin', 30 0);
       .container {
         @include pxRem('padding', 0 10);
       }
-      
+
       .slick-slider .slick-arrow {
         opacity: 1;
       }
