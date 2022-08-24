@@ -5,7 +5,7 @@ const ModalShoppingCart = () => {
   return (
     <ul className='dropdown'>
       <li className='card-product'>
-        <Image style={{padding: "10px 0"}} className='product-image' width='80px' height="104px" src="/images/shopping-cart-product.jpg" alt="product-image" />
+        <Image className='product-image' width='80px' height="104px" src="/images/shopping-cart-product.jpg" alt="product-image" />
         <div className='product-content'>
           <p className='product-name'>
             aliquam quaerat voluptatem
