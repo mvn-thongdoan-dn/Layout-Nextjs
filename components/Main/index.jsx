@@ -3,6 +3,7 @@ import LastestNews from '../LastestNews'
 import NewsLetter from '../NewsLetter'
 import MainBanner from '../Banner/MainBanner'
 import SubBanner from '../Banner/SubBanner'
+import BrandLogo from '../BrandLogo'
 
 const Main = () => {
   return (
@@ -10,6 +11,7 @@ const Main = () => {
       <MainBanner/>
       <SubBanner/>
       <LastestNews/>
+      <BrandLogo/>
       <NewsLetter/>
     </main>
   )

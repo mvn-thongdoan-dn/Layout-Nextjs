@@ -16,13 +16,13 @@ const dataLastestNews = [
 
 const LastestNews = () => {
 
-  var settings = {
+  let settings = {
     dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
-    // autoplay: true,
-    // autoplaySpeed: 6000,
+    autoplay: true,
+    autoplaySpeed: 6000,
     pauseOnHover: true,
     responsive: [
       {

@@ -298,6 +298,22 @@
       cursor: pointer;
       z-index: 1;
     }
+
+    .header-nav .nav-menu {
+      @include pxRem('height', 91);
+    }
+
+    .header-nav .nav-menu .nav-item {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-options-right .search-wrapper .collapse, 
+    .header-options-right .user-wrapper .collapse, 
+    .header-options-right .shopping-cart-wrapper .collapse {
+      top: 50px;
+    }
   }
 
   @keyframes headersticky {
