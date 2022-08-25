@@ -564,6 +564,89 @@
     }
   }
 
+  .testimonials {
+    @include pxRem('margin', 80 0);
+    width: 100%;
+    background: #999999 url('/images/testimonial.jpg');
+
+    .testimonial-item {
+      @include pxRem('padding', 130 0);
+      display: block !important;
+      width: 70% !important;
+      margin: 0 auto !important;
+      text-align: center;
+    }
+
+    .testimonial-item .item-image {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+      margin-bottom: 35px;
+      border: 5px solid white
+    }
+
+    .testimonial-item .item-content {
+      color: map-get($colors, white);
+    }
+
+    .testimonial-item .item-content .content-testi {
+      @include pxRem('margin-bottom', 16);
+      padding: 0 9%;
+      font: italic 400 14px "Poppins";
+    }
+
+    .testimonial-item .item-content .content-user-name {
+      @include pxRem('margin-bottom', 6);
+      font: 400 16px "Poppins";
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+    }
+
+    .testimonial-item .item-content .content-position {
+      font: 400 15px "Poppins";
+      text-transform: capitalize;
+    }
+
+    .slick-slider .slick-arrow {
+      display: none !important;
+    }
+
+    .slick-dots {
+      bottom: 18%;
+    }
+
+    .slick-dots li {
+      margin: 0;
+    }
+
+    .slick-dots li button:before {
+      opacity: 1;
+      color: map-get($colors, white);
+      font-size: 12px;
+    }
+
+    .slick-dots li.slick-active button:before {
+      color: map-get($colors, yellow);
+      font-size: 14px;
+    }
+
+    @include respond-below(medium) {
+      @include pxRem('margin', 50 0);
+
+      .testimonial-item {
+        @include pxRem('padding', 30 0);
+      }
+
+      .slick-dots {
+        bottom: 5%;
+      }
+    }
+
+    @media (max-width: 543px) {
+      @include pxRem('margin', 30 0);
+    }
+  }
+
   // lastest-new
   .lastest-news {
     .lastest-list {
