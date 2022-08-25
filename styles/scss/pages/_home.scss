@@ -189,6 +189,10 @@
 
     @media (max-width: 543px) {
 
+      .container {
+        @include pxRem('padding', 0 10);
+      }
+
       .slick-active.slick-current .slider-item .item-content.top {
         transform: translateY(0);
       }
@@ -555,7 +559,7 @@
         position: static;
         z-index: 1;
         width: 90%;
-        margin: -40px 0 0;
+        margin: -100px 0 0;
       }
     }
   }

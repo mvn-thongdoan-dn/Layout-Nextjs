@@ -262,8 +262,10 @@
       }
   
       .header-menu .navbar-toggle .navbar-collapse {
-        width: 96%;
-        left: 2%;
+        max-width: 523px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
       }
     }
 
