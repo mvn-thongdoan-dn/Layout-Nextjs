@@ -8,6 +8,11 @@
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 0px;
+
+  @media (max-width: 543px) {
+    @include pxRem('margin-bottom', 20);
+    font-size: 24px;
+  }
 }
 
 

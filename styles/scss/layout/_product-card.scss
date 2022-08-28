@@ -1,0 +1,237 @@
+.product-card {
+  @include pxRem('margin-bottom', 60);
+  @include pxRem('padding', 0 15);
+  position: relative;
+  display: inline-block;
+
+  &:hover .product-images > span:last-child {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  &:hover .product-description {
+    bottom: 10px;
+    opacity: 1;
+  }
+
+  &:hover .countdown {
+    top: -40px;
+  }
+
+  &:hover .flags span {
+    opacity: 1;
+  }
+
+  &:hover .flags span.sale {
+    left: 30px;
+  }
+
+  &:hover .flags span.new {
+    right: 30px;
+  }
+
+  .product-images {
+    display: block;
+    position: relative;
+    
+    & > span:last-child {
+      position: absolute !important;
+      top: 0;
+      left: 0;
+      transform: scale(0);
+      opacity: 0;
+      transition: all .5s ease-in-out;
+    }
+  }
+
+  .countdown {
+    padding: 0;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    max-width: 65%;
+    margin: auto;
+    transition: 400ms ease-in-out;
+    text-align: center;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      height: 36px;
+      margin: 0 20px 0 0;
+      max-width: 3em;
+      position: relative;
+      text-align: center;
+      width: 30px;
+      text-align: center;
+      line-height: 36px;
+      font-size: 16px;
+      font-weight: 300;
+      color: #000;
+    }
+
+    li.seconds {
+      color: red;
+      margin: 0;
+    }
+
+    li.days:after,
+    li.hours:after,
+    li.minutes:after {
+      color: #000;
+      font-size: 20px;
+      position: absolute;
+      right: -12px;
+      font-weight: 400;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      content: ":";
+      height: 39px;
+    }
+  }
+
+  .flags {
+    span {
+      position: absolute;
+      opacity: 0;
+      z-index: 10;
+      transition: all 400ms ease-in-out;
+    }
+
+    span.sale {
+      left: -40px;
+      top: 15px;
+    }
+
+    span.new {
+      right: -40px;
+      top: 15px;
+    }
+  }
+
+  .product-description {
+    @include pxRem('padding', 0 10);
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: -10px;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    background-color: map-get($colors, white);
+    text-align: center;
+
+    .product-name {
+      @include pxRem('margin', 10 0);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font: 400 18px "Playfair Display";
+      color: map-get($colors, black);
+    }
+
+    .product-rate {
+      svg {
+        height: 15px;
+        width: 15px;
+        color: map-get($colors, warning);
+      }
+    }
+
+    .product-price {
+      @include pxRem('margin', 10 0);
+
+      .regular-price {
+        @include pxRem('margin-right', 5);
+        font: 500 18px "Poppins";
+        color: map-get($colors, black);
+      }
+
+      .old-price {
+        font: 300 14px "Poppins";
+        color: map-get($colors, primary);
+        text-decoration: line-through;
+      }
+    }
+
+    .button-group {
+      @include pxRem('padding-bottom', 10);
+    }
+
+    .button-group .btn {
+      @include pxRem('height', 40);
+      @include pxRem('width', 40);
+      @include pxRem('margin-right', 3);
+      @include pxRem('padding', 10);
+      border-radius: 50%;
+    }
+
+    .button-group .btn svg {
+      @include pxRem('font-size', 18);
+    }
+  }
+
+  @include respond-below(medium) {
+
+    .product-description {
+      position: static;
+      opacity: 1;
+      width: 100%;
+    }
+
+  }
+
+  @media (max-width: 543px) {
+    @include pxRem('padding', 0 10);
+    @include pxRem('margin-bottom', 45);
+
+    .flags span {
+      opacity: 1;
+    }
+
+    .flags span.sale {
+      left: 20px;
+    }
+
+    .flags span.new {
+      right: 20px;
+    }
+
+    .countdown {
+      top: 45px;
+
+      li {
+        font-size: 13px;
+        margin: 0 15px 0 0;
+      }
+    }
+
+    .product-description {
+      .product-name {
+        font-size: 14px;
+      }
+
+      .product-price .regular-price {
+        font-size: 14px;
+      }
+
+      .product-price .old-price {
+        font-size: 13px;
+      }
+
+      .button-group .btn {
+        @include pxRem('height', 20);
+        @include pxRem('width', 24);
+        border: none;
+        background: none;
+        padding: 0;
+        color: map-get($colors, primary);
+      }
+    }
+  }
+}

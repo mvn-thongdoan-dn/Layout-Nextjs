@@ -45,7 +45,7 @@ const LastestNews = () => {
   return (
     <section className='lastest-news'>
       <div className="container">
-        <SectionTitle content={"Lastest News"}/>
+        <SectionTitle content={"Latest News"}/>
         <div className='lastest-list'>
           <Slider {...settings}>
             {
