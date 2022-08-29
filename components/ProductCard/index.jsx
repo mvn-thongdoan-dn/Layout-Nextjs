@@ -41,19 +41,19 @@ const ProductCard = ({product}) => {
             </Link>
           </h3>
           <div className="product-rate">
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               star
             </span>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               star
             </span>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               star
             </span>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               star
             </span>
-            <span class="material-symbols-outlined">
+            <span className="material-symbols-outlined">
               star
             </span>
             {/* <StarSharpIcon/>
@@ -68,14 +68,14 @@ const ProductCard = ({product}) => {
           <div className="button-group">
             <span className="btn btn-primary btn-cart">
               {/* <ShoppingCartSharpIcon/> */}
-              <span class="material-symbols-outlined">
+              <span className="material-symbols-outlined">
                 shopping_cart
               </span>
             </span>
             <Link href="#product">
               <a className="btn btn-primary btn-favorite">
                 {/* <FavoriteSharpIcon/> */}
-                <span class="material-symbols-outlined">
+                <span className="material-symbols-outlined">
                   favorite
                 </span>
               </a>
@@ -83,13 +83,13 @@ const ProductCard = ({product}) => {
             <span className="btn btn-primary btn-compare">
               {/* <EqualizerSharpIcon/>
                */}
-               <span class="material-symbols-outlined">
+               <span className="material-symbols-outlined">
 equalizer
 </span>
             </span>
             <span className="btn btn-primary btn-quickview">
               {/* <VisibilitySharpIcon/> */}
-              <span class="material-symbols-outlined">
+              <span className="material-symbols-outlined">
 visibility
 </span>
             </span>
