@@ -52,20 +52,20 @@ const ProductCard = ({product}) => {
             <span className="old-price">$150.00</span>
           </div>
           <div className="button-group">
-            <span className="btn btn-primary btn-cart">
+            <button className="btn btn-primary btn-cart">
               <ShoppingCartSharpIcon/>
-            </span>
+            </button>
             <Link href="#product">
               <a className="btn btn-primary btn-favorite">
                 <FavoriteSharpIcon/>
               </a>
             </Link>
-            <span className="btn btn-primary btn-compare">
+            <button className="btn btn-primary btn-compare">
               <EqualizerSharpIcon/>
-            </span>
-            <span className="btn btn-primary btn-quickview">
+            </button>
+            <button className="btn btn-primary btn-quickview">
               <VisibilitySharpIcon/>
-            </span>
+            </button>
           </div>
       </div>
     </div>
