@@ -64,7 +64,7 @@ const BrandLogo = () => {
                 <div className="brand-item" key={id}>
                   <Link href="#brand-logo">
                     <a>
-                      <Image src={srcImg} width='140px' height='100px'/>
+                      <Image src={srcImg} width='140px' height='100px' alt='#images'/>
                     </a>
                   </Link>
                 </div>

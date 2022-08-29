@@ -40,7 +40,7 @@ const SliderMain = () => {
                 <div className="slider-item" key={id}>
                   <Link href="#image">
                     <a className='item-image'>
-                      <Image src={srcImg} width="1200px" height="600px"/>
+                      <Image src={srcImg} width="1200px" height="600px" alt='#image-1'/>
                     </a>
                   </Link>
                   <div className={`item-content ${content.redirect}`}>

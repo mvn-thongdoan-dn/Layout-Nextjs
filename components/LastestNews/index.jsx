@@ -56,7 +56,7 @@ const LastestNews = () => {
                     <div className="item-image">
                       <SearchIcon/>
                       <a href="">
-                        <Image src={srcImg} width='380px' height='270px'/>
+                        <Image src={srcImg} width='380px' height='270px' alt='#image'/>
                       </a>
                     </div>
                     <div className='item-content'>

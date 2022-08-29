@@ -49,7 +49,7 @@ const Testimonial = () => {
               return (
                 <div className="testimonial-item" key={id}>
                   <div className="item-image">
-                    <Image src={srcImg} width="100px" height="100px"/>
+                    <Image src={srcImg} width="100px" height="100px" alt='#image'/>
                   </div>
                   <div className="item-content">
                     <p className="content-testi">{testi}</p>

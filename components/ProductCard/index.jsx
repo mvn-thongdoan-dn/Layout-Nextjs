@@ -14,8 +14,8 @@ const ProductCard = ({product}) => {
     <div className='product-card'>
       <Link href="#images">
         <a className='product-images'>
-          <Image src={srcImg1} width="360px" height="460px"/>
-          <Image src={srcImg2} width="360px" height="460px"/>
+          <Image src={srcImg1} width="360px" height="460px" alt='#image-1'/>
+          <Image src={srcImg2} width="360px" height="460px" alt='#image-2'/>
         </a>
       </Link>
       { 
