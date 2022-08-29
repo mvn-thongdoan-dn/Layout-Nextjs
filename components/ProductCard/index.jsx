@@ -40,31 +40,60 @@ const ProductCard = ({product}) => {
               {name}
             </Link>
           </h3>
-          <ul className="product-rate">
-            <li><StarSharpIcon/></li>
-            <li><StarSharpIcon/></li>
-            <li><StarSharpIcon/></li>
-            <li><StarSharpIcon/></li>
-            <li><StarSharpIcon/></li>
-          </ul>
+          <div className="product-rate">
+            <span class="material-symbols-outlined">
+              star
+            </span>
+            <span class="material-symbols-outlined">
+              star
+            </span>
+            <span class="material-symbols-outlined">
+              star
+            </span>
+            <span class="material-symbols-outlined">
+              star
+            </span>
+            <span class="material-symbols-outlined">
+              star
+            </span>
+            {/* <StarSharpIcon/>
+            <StarSharpIcon/>
+            <StarSharpIcon/>
+            <StarSharpIcon/> */}
+          </div>
           <div className="product-price">
             <span className="regular-price">$100.00</span>
             <span className="old-price">$150.00</span>
           </div>
-          <ul className="button-group">
-            <li className="btn btn-primary btn-cart">
-              <ShoppingCartSharpIcon/>
-            </li>
-            <li className="btn btn-primary btn-favorite">
-              <FavoriteSharpIcon/>
-            </li>
-            <li className="btn btn-primary btn-compare">
-              <EqualizerSharpIcon/>
-            </li>
-            <li className="btn btn-primary btn-quickview">
-              <VisibilitySharpIcon/>
-            </li>
-          </ul>
+          <div className="button-group">
+            <span className="btn btn-primary btn-cart">
+              {/* <ShoppingCartSharpIcon/> */}
+              <span class="material-symbols-outlined">
+                shopping_cart
+              </span>
+            </span>
+            <Link href="#product">
+              <a className="btn btn-primary btn-favorite">
+                {/* <FavoriteSharpIcon/> */}
+                <span class="material-symbols-outlined">
+                  favorite
+                </span>
+              </a>
+            </Link>
+            <span className="btn btn-primary btn-compare">
+              {/* <EqualizerSharpIcon/>
+               */}
+               <span class="material-symbols-outlined">
+equalizer
+</span>
+            </span>
+            <span className="btn btn-primary btn-quickview">
+              {/* <VisibilitySharpIcon/> */}
+              <span class="material-symbols-outlined">
+visibility
+</span>
+            </span>
+          </div>
       </div>
     </div>
   )
