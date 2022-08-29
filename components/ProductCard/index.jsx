@@ -41,25 +41,11 @@ const ProductCard = ({product}) => {
             </Link>
           </h3>
           <div className="product-rate">
-            <span className="material-symbols-outlined">
-              star
-            </span>
-            <span className="material-symbols-outlined">
-              star
-            </span>
-            <span className="material-symbols-outlined">
-              star
-            </span>
-            <span className="material-symbols-outlined">
-              star
-            </span>
-            <span className="material-symbols-outlined">
-              star
-            </span>
-            {/* <StarSharpIcon/>
             <StarSharpIcon/>
             <StarSharpIcon/>
-            <StarSharpIcon/> */}
+            <StarSharpIcon/>
+            <StarSharpIcon/>
+            <StarSharpIcon/>
           </div>
           <div className="product-price">
             <span className="regular-price">$100.00</span>
@@ -67,31 +53,18 @@ const ProductCard = ({product}) => {
           </div>
           <div className="button-group">
             <span className="btn btn-primary btn-cart">
-              {/* <ShoppingCartSharpIcon/> */}
-              <span className="material-symbols-outlined">
-                shopping_cart
-              </span>
+              <ShoppingCartSharpIcon/>
             </span>
             <Link href="#product">
               <a className="btn btn-primary btn-favorite">
-                {/* <FavoriteSharpIcon/> */}
-                <span className="material-symbols-outlined">
-                  favorite
-                </span>
+                <FavoriteSharpIcon/>
               </a>
             </Link>
             <span className="btn btn-primary btn-compare">
-              {/* <EqualizerSharpIcon/>
-               */}
-               <span className="material-symbols-outlined">
-equalizer
-</span>
+              <EqualizerSharpIcon/>
             </span>
             <span className="btn btn-primary btn-quickview">
-              {/* <VisibilitySharpIcon/> */}
-              <span className="material-symbols-outlined">
-visibility
-</span>
+              <VisibilitySharpIcon/>
             </span>
           </div>
       </div>
