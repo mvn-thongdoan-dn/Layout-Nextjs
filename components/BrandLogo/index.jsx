@@ -54,7 +54,7 @@ const BrandLogo = () => {
   };
 
   return (
-    <section className='brand-logo'>
+    <div className='brand-logo'>
       <div className="container">
         <Slider {...settings}>
           {
@@ -73,7 +73,7 @@ const BrandLogo = () => {
           }
         </Slider>
       </div>
-    </section>
+    </div>
   )
 }
 
