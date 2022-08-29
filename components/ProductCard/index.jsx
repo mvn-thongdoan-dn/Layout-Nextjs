@@ -40,33 +40,31 @@ const ProductCard = ({product}) => {
               {name}
             </Link>
           </h3>
-          <div className="product-rate">
-            <StarSharpIcon/>
-            <StarSharpIcon/>
-            <StarSharpIcon/>
-            <StarSharpIcon/>
-            <StarSharpIcon/>
-          </div>
+          <ul className="product-rate">
+            <li><StarSharpIcon/></li>
+            <li><StarSharpIcon/></li>
+            <li><StarSharpIcon/></li>
+            <li><StarSharpIcon/></li>
+            <li><StarSharpIcon/></li>
+          </ul>
           <div className="product-price">
             <span className="regular-price">$100.00</span>
             <span className="old-price">$150.00</span>
           </div>
-          <div className="button-group">
-            <span className="btn btn-primary btn-cart">
+          <ul className="button-group">
+            <li className="btn btn-primary btn-cart">
               <ShoppingCartSharpIcon/>
-            </span>
-            <Link href="#product">
-              <a className="btn btn-primary btn-favorite">
-                <FavoriteSharpIcon/>
-              </a>
-            </Link>
-            <span className="btn btn-primary btn-compare">
+            </li>
+            <li className="btn btn-primary btn-favorite">
+              <FavoriteSharpIcon/>
+            </li>
+            <li className="btn btn-primary btn-compare">
               <EqualizerSharpIcon/>
-            </span>
-            <span className="btn btn-primary btn-quickview">
+            </li>
+            <li className="btn btn-primary btn-quickview">
               <VisibilitySharpIcon/>
-            </span>
-          </div>
+            </li>
+          </ul>
       </div>
     </div>
   )
